@@ -18,6 +18,12 @@ class ShrinkNameTest(unittest.TestCase):
     def test_an_other_name_given(self):
         self.assertEqual(shrink_name("Yan Rui Fonseca"), "Yan Rui F.")
 
+    def test_my_full_name_given(self):
+        self.assertEqual(shrink_name("Isaque Vieira de Sousa Alves"), "Isaque V.")
+
+    def test_my_first_names_given(self):
+        self.assertEqual(shrink_name("Isaque Vieira"), "Isaque Vieira")
+
 
 if __name__ == '__main__':
     unittest.main()
