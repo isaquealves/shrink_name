@@ -11,7 +11,7 @@ def shrink_name(fullname: str='') -> str:
 
         if len(fullname) <= 13:
                 return fullname
-        fullname = fullname[:13]
+        fullname = fullname[:12]
         name = fullname.split(' ')
         name[-1] = '{0}.'.format(name[-1][0])
         return ' '.join(name)
