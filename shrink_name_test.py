@@ -6,14 +6,17 @@ class ShrinkNameTest(unittest.TestCase):
     def test_no_name_given(self):
         self.assertEqual(shrink_name(), '')
 
-    def test_no_name_given(self):
-        self.assertEqual(shrink_name(), '')
+    def test_none_given(self):
+        self.assertEqual(shrink_name(None), '')
 
     def test_a_name_given(self):
         self.assertEqual(shrink_name("Uncle Bob"), "Uncle Bob")
 
     def test_another_name_given(self):
         self.assertEqual(shrink_name("Bjarne Stroustrup"), "Bjarne S.")
+
+    def test_an_other_name_given(self):
+        self.assertEqual(shrink_name("Yan Rui Fonseca"), "Yan Rui F.")
 
 
 if __name__ == '__main__':
